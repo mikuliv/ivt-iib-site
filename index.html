@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ИВТиИБ — мой учебный ресурс</title>
+  <meta name="description" content="Одностраничный учебный web-ресурс по направлению ИВТиИБ: дисциплины, навыки, проекты и полезные ссылки." />
+  <style>
+    :root{
+      --bg:#0b1020; --card:#121a33; --text:#e8ecff; --muted:#b8c0ff;
+      --accent:#7c5cff; --accent2:#2de2e6; --border:rgba(255,255,255,.08);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background: radial-gradient(900px 500px at 20% 0%, rgba(124,92,255,.25), transparent 60%),
+                  radial-gradient(800px 500px at 80% 20%, rgba(45,226,230,.18), transparent 60%),
+                  var(--bg);
+      color:var(--text); line-height:1.55;
+    }
+    a{color:inherit}
+    header{
+      padding:56px 18px 24px;
+      max-width:980px; margin:0 auto;
+    }
+    .tag{
+      display:inline-flex; gap:10px; align-items:center;
+      padding:8px 12px; border:1px solid var(--border); border-radius:999px;
+      background:rgba(255,255,255,.03); color:var(--muted); font-size:14px;
+    }
+    .dot{width:10px;height:10px;border-radius:50%;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));}
+    h1{margin:16px 0 10px; font-size:40px; letter-spacing:.2px}
+    p.lead{margin:0; color:var(--muted); font-size:16px; max-width:68ch}
+    nav{
+      margin-top:20px; display:flex; flex-wrap:wrap; gap:10px;
+    }
+    nav a{
+      text-decoration:none; padding:10px 12px; border:1px solid var(--border);
+      border-radius:12px; background:rgba(255,255,255,.03);
+      transition:transform .12s ease, border-color .12s ease;
+    }
+    nav a:hover{transform:translateY(-1px); border-color:rgba(124,92,255,.5)}
+    main{max-width:980px;margin:0 auto;padding:18px}
+    .grid{
+      display:grid; gap:14px;
+      grid-template-columns:repeat(12,1fr);
+      margin-top:14px;
+    }
+    .card{
+      grid-column:span 12;
+      border:1px solid var(--border); border-radius:18px;
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      padding:18px;
+    }
+    @media (min-width:860px){
+      .c6{grid-column:span 6}
+      .c4{grid-column:span 4}
+      .c8{grid-column:span 8}
+    }
+    h2{margin:0 0 8px; font-size:20px}
+    ul{margin:10px 0 0; padding-left:18px; color:var(--muted)}
+    .pill{
+      display:inline-block; font-size:13px; color:var(--muted);
+      border:1px solid var(--border); padding:6px 10px; border-radius:999px;
+      margin:6px 8px 0 0; background:rgba(255,255,255,.03);
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:8px;
+      text-decoration:none; padding:10px 14px; border-radius:14px;
+      border:1px solid rgba(124,92,255,.6);
+      background:linear-gradient(135deg, rgba(124,92,255,.22), rgba(45,226,230,.16));
+      margin-top:12px;
+    }
+    .btn small{color:var(--muted)}
+    footer{
+      max-width:980px;margin:0 auto;padding:26px 18px 40px;
+      color:var(--muted); border-top:1px solid var(--border);
+    }
+    .kbd{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      padding:2px 6px;border:1px solid var(--border);border-radius:6px;background:rgba(255,255,255,.03)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="tag"><span class="dot"></span>Учебный web-ресурс по направлению «ИВТиИБ»</div>
+    <h1>ИВТиИБ: конспекты, навыки, проекты</h1>
+    <p class="lead">
+      Здесь я собираю полезные материалы по дисциплинам, план развития навыков и мини-проекты,
+      которые делаю в рамках обучения.
+    </p>
+    <nav>
+      <a href="#about">О направлении</a>
+      <a href="#skills">Навыки</a>
+      <a href="#subjects">Дисциплины</a>
+      <a href="#projects">Проекты</a>
+      <a href="#links">Ссылки</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about" class="grid">
+      <div class="card c8">
+        <h2>О направлении «ИВТиИБ»</h2>
+        <p style="color:var(--muted); margin:0">
+          «Информационные системы и технологии / Информационная безопасность» — это сочетание разработки,
+          администрирования и защиты данных: от алгоритмов и баз данных до сетей и кибербезопасности.
+        </p>
+        <div>
+          <span class="pill">Программирование</span>
+          <span class="pill">Сети</span>
+          <span class="pill">Базы данных</span>
+          <span class="pill">ИБ</span>
+          <span class="pill">Моделирование</span>
+        </div>
+      </div>
+
+      <div class="card c4">
+        <h2>Цель ресурса</h2>
+        <ul>
+          <li>кратко фиксировать учебные темы</li>
+          <li>собирать полезные инструменты</li>
+          <li>показывать результаты работ и ЛР</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills" class="grid">
+      <div class="card c6">
+        <h2>Навыки (что развиваю)</h2>
+        <ul>
+          <li>Основы алгоритмов и структур данных</li>
+          <li>HTML/CSS/JS для web-разработки</li>
+          <li>Работа с БД (SQL) и моделирование данных</li>
+          <li>Основы сетей и безопасности (практики ИБ)</li>
+        </ul>
+      </div>
+      <div class="card c6">
+        <h2>Инструменты</h2>
+        <ul>
+          <li>VS Code / Git / GitHub</li>
+          <li>Windows + PowerShell</li>
+          <li>KOMPAS-3D (учебная версия)</li>
+          <li>Algodoo (вирт. лаборатории по физике)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="subjects" class="grid">
+      <div class="card c12">
+        <h2>Дисциплины (пример)</h2>
+        <ul>
+          <li>Теория информации и кодирование</li>
+          <li>Программирование (типовые задачи)</li>
+          <li>Математическое моделирование</li>
+          <li>3D-моделирование (KOMPAS-3D)</li>
+          <li>Моделирование физических процессов (Algodoo)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects" class="grid">
+      <div class="card c6">
+        <h2>Проекты</h2>
+        <ul>
+          <li>Мини-сайт-портфолио (этот ресурс)</li>
+          <li>ЛР: алгоритмы строк/массивов (универсальный язык + VBA/Office)</li>
+          <li>ЛР: 3D-модель усечённого полого тела</li>
+          <li>ЛР: графики v(t) в Algodoo</li>
+        </ul>
+      </div>
+      <div class="card c6">
+        <h2>Что дальше</h2>
+        <ul>
+          <li>Добавить страницу с файлами отчётов (PDF/DOCX)</li>
+          <li>Сделать галерею скриншотов работ</li>
+          <li>Добавить форму обратной связи (позже)</li>
+        </ul>
+        <a class="btn" href="#contacts">Связаться <small>→</small></a>
+      </div>
+    </section>
+
+    <section id="links" class="grid">
+      <div class="card c12">
+        <h2>Полезные ссылки</h2>
+        <ul>
+          <li>HTML/CSS: справочник и практика</li>
+          <li>Git и GitHub: основы работы с репозиториями</li>
+          <li>Безопасность: базовые термины, принципы, примеры угроз</li>
+        </ul>
+        <p style="color:var(--muted); margin:12px 0 0">
+          (Ссылки можно дописать позже — в отчёте важно, что структура и смысл уже есть.)
+        </p>
+      </div>
+    </section>
+
+    <section id="contacts" class="grid">
+      <div class="card c12">
+        <h2>Контакты</h2>
+        <p style="color:var(--muted); margin:0">
+          Автор: студент направления «ИВТиИБ».<br>
+          Для связи: <span class="kbd">email</span> / <span class="kbd">Telegram</span> (впиши свои данные).
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>© <span id="y"></span> Учебный web-ресурс «ИВТиИБ».</div>
+    <div style="margin-top:6px">Сделано как одностраничный сайт (HTML+CSS) — можно разместить через GitHub Pages.</div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
